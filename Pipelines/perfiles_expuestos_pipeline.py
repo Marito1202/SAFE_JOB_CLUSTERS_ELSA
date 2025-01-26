@@ -1,4 +1,4 @@
-from perfiles_expuestos_feat_emg import *
+from perfiles_expuestos_feat_eng import *
 
 # %%
 scaler = StandardScaler()
