@@ -1,3 +1,5 @@
+from perfiles_expuestos_feat_emg import *
+
 # %%
 scaler = StandardScaler()
 df_scaled1 = scaler.fit_transform(df_tmp1)
