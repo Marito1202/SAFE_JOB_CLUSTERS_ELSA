@@ -1,5 +1,6 @@
 from perfiles_no_expuestos_feat_eng import *
 from perfiles_no_expuestos_clustering import *
+from perfiles_no_expuestos_reporting import *
 
 # %% [markdown]
 # # Calculo de AUC
