@@ -1,6 +1,3 @@
-from perfiles_no_expuestos_feat_eng import *
-from perfiles_no_expuestos_clustering import *
-
 def grafica_por_dimension(df,
                           code_dimension,
                           code_question,
