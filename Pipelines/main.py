@@ -58,3 +58,6 @@ dfper.groupby(['target','Acoso_Total','Testigo_Total']).agg(CTD=('measurement_pr
 dfper['Acoso_Total'].value_counts(normalize=True)
 
 dfper['target'].value_counts(normalize=True)
+
+from perfiles_expuestos_pipeline import *
+from perfiles_no_expuestos_pipeline import *
