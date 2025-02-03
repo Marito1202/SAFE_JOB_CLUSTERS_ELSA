@@ -13,8 +13,11 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 import prince
 from yellowbrick.cluster import KElbowVisualizer
+from pathlib import Path
 
-os.chdir('D:\\DATA_ELSA_2023')
+work_dir = Path.cwd() 
+
+os.chdir(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Data\Data\Data")
 
 dforg = pd.read_csv('Encuesta_organizacional_2023.csv')
 dfper = pd.read_csv('Encuesta_personas_2023.csv')
@@ -59,5 +62,6 @@ dfper['Acoso_Total'].value_counts(normalize=True)
 
 dfper['target'].value_counts(normalize=True)
 
-from perfiles_expuestos_pipeline import *
-from perfiles_no_expuestos_pipeline import *
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Pipelines\perfiles_expuestos_pipeline.py").read())
+
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Pipelines\perfiles_no_expuestos_pipeline.py").read())
