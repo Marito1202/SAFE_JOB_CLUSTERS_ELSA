@@ -1,6 +1,9 @@
-from perfiles_no_expuestos_feat_eng import *
-from perfiles_no_expuestos_clustering import *
-from perfiles_no_expuestos_reporting import *
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Feature_Engineering\perfiles_no_expuestos_feat_eng.py").read())
+
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Clustering_Algorithm\perfiles_no_expuestos_clustering.py").read())
+
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Reporting\perfiles_no_expuestos_reporting.py").read())
+
 
 # %% [markdown]
 # # Calculo de AUC
@@ -47,5 +50,3 @@ dfauc = pd.DataFrame(zip(auc_scores.keys(),auc_scores.values()),columns=['variab
 
 # %%
 dfauc.sort_values('AUC',ascending=False)
-
-
