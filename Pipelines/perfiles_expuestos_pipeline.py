@@ -1,6 +1,8 @@
-from perfiles_expuestos_feat_eng import *
-from perfiles_expuestos_clustering import *
-from perfiles_expuestos_reporting import *
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Feature_Engineering\perfiles_expuestos_feat_eng.py").read())
+
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Clustering_Algorithm\perfiles_expuestos_clustering.py").read())
+
+exec(open(f"{work_dir}\Downloads\SAFE_JOB_CLUSTERS_ELSA-main\SAFE_JOB_CLUSTERS_ELSA-main\Reporting\perfiles_expuestos_reporting.py").read())
 
 # Generar variable de acoso total (indique quien es declarado y quien es tecnico)
 
@@ -52,5 +54,3 @@ df_rev1['aad_flg_pos'] = df_rev1[tolerancia].apply(lambda row: 1 if any(x in ['S
 
 # %%
 df_rev1.groupby(['segmento','aad_flg_pos']).agg(cantidad=('measurement_process_id','count')).reset_index().pivot_table(values='cantidad',columns='aad_flg_pos',index='segmento').reset_index()
-
-
