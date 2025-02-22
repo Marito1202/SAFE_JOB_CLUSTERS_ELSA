@@ -39,7 +39,9 @@ plt.grid(True)
 plt.show()
 
 # %%
-df_pca = pd.read_csv('kernel_pca_acoso_17102024.csv').to_numpy()
+## df_pca = pd.read_csv('kernel_pca_acoso_17102024.csv').to_numpy()
+
+df_pca = pca.to_numpy()
 
 # %%
 from sklearn.mixture import GaussianMixture
